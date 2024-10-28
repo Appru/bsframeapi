@@ -3,11 +3,12 @@ const app = express();
 const PORT = 8080;
 const cors = require("cors");
 
-const corsOptions = {
-  origin: "https://bsframeapi.onrender.com/frameid",
-};
+// const corsOptions = {
+//   origin: "https://bsframeapi.onrender.com/frameid",
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors())
 
 app.use(express.json());
 
