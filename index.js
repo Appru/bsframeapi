@@ -8,7 +8,7 @@ const cors = require("cors");
 // };
 
 // app.use(cors(corsOptions));
-app.use(cors())
+app.use(cors());
 
 app.use(express.json());
 
@@ -17,9 +17,16 @@ app.listen(PORT, () => console.log("its working"));
 app.get("/frameid", (req, res) => {
   res.status(200).send([
     {
-      123456: "img1",
-      56789: "img2",
-      10001: "img3",
+      id: 12345,
+      image: "img1"
+    },
+    {
+      id: 1001,
+      image: "img2"
+    },
+    {
+      id: 8888,
+      image: "img3"
     },
   ]);
 });
