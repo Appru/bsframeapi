@@ -4,7 +4,7 @@ const PORT = 8080;
 const cors = require("cors");
 
 const corsOptions = {
-  origin: "http://127.0.0.1:5173",
+  origin: "https://bsframeapi.onrender.com/frameid",
 };
 
 app.use(cors(corsOptions));
