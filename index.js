@@ -10,6 +10,10 @@ app.listen(
 )
 
 app.get('/frameid',(req,res)=>{
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+  if (req.headers.origin && ['http://localhost:3000', 'http://localhost:3001'].includes(req.headers.origin)) {
+    res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  }
     res.status(200).send([{
         123456: "img1",
         56789: "img2",
